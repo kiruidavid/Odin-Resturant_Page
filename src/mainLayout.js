@@ -3,7 +3,9 @@ import loadMenu from "./menu";
 import loadContact from "./contact"
 function createNav(){ 
     const nav = document.createElement("nav") 
+    nav.classList.add("navbar")
     const navHeaderText = document.createElement("h2") 
+    navHeaderText.classList.add('nav-logo')
     navHeaderText.innerHTML = "<h3><i class='fa fa-coffee' aria-hidden='true'></i> Chainess </h3>"
     
     const navList = document.createElement("ul") 
@@ -23,7 +25,9 @@ function createNav(){
         navList.appendChild(li)
 
     } 
-    homeButton.onclick = homeTag;
+    
+    homeButton.onclick = homeTag; 
+    navList.appendChild(homeButton)
     
     const menuButton = document.createElement("button") 
     menuButton.classList.add("menu-button") 
@@ -39,6 +43,7 @@ function createNav(){
 
     } 
     menuButton.onclick = menuTag; 
+    navList.appendChild(menuButton)
 
     const contactButton = document.createElement("button") 
     contactButton.classList.add("contact-button") 
@@ -52,7 +57,8 @@ function createNav(){
         li.appendChild(anchor) 
         navList.appendChild(li)
     } 
-    contactButton.onclick = contactTag;
+    contactButton.onclick = contactTag; 
+    navList.appendChild(contactButton)
 
     
    
@@ -70,27 +76,30 @@ function createNav(){
 
 
 }  
-function setActiveButton(button){
-    const buttons = document.querySelectorAll(".button-nav") 
-    buttons.forEach((button) => {
-        if(button !== this) {
-            button.classList.remove("active")
-        }
-    }) 
-    button.classList.add("active")
-} 
+
 function createMain(){
     const main = document.createElement("main") 
     main.classList.add("main") 
     main.setAttribute("id", "main") 
     return main
+} 
+function createFooter(){
+    const footer = document.createElement("footer") 
+    footer.classList.add("footer")
+    const footerDetails = document.createElement("p") 
+    footerDetails.classList.add("footer-details") 
+    footerDetails.textContent = 'Chainess @ 2020' 
+
+    footer.appendChild(footerDetails)
+    return footer
 }
 
 function startWebpage(){
     const content = document.getElementById("content") 
 
     content.appendChild(createNav()) 
-    content.appendChild(createMain())
+    content.appendChild(createMain()) 
+    content.appendChild(createFooter())
 
     //setActiveButton(document.querySelector(".button-nav"))
 } 

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Kaushan+Script&display=swap');
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+} 
+.navbar {
+    background-color: rgb(114, 151, 12); 
+    display: flex;  
+    align-items: center;
+    height: 80px; 
+    
+} 
+.nav-logo{
+    color: rgb(29, 75, 116); 
+    padding-left: 12px; 
+    margin-left: 145px; 
+    
+    font-size: 30px;
+} 
+.home-button{
+    background-color: azure; 
+    margin-left: 40%; 
+    width: 122px; 
+    height: 60px;
+} 
+.menu-button { 
+    background-color: beige;
+    margin-left: 34px; 
+    width: 122px; 
+    height: 60px;
+} 
+.contact-button{ 
+    background-color: bisque;
+    margin-left: 34px; 
+    width: 122px; 
+    height: 60px;
+} 
+.home{
+    background-image: url('./images/resturant.jpeg') ; 
+    width: 100%; 
+    
+    height: 660px; 
+    
+     
+    position: absolute;
+} 
+.home p{
+    text-align: center; 
+    font-size: 48px; 
+    margin-top: 45px; 
+    font-family: 'Cinzel', serif;
+    color: rgb(1, 10, 6); 
+   
+    
+    
+    
+} 
+.menu{ 
+    background-image: url('./images/tea\ and\ biscuit.jpeg');  
+    width: 100%; 
+    height: 670px;  
+    position: absolute;
+    
+}  
+.menu-item{ 
+    background-color: brown; 
+    width: 50%;  
+    height: 440px;
+    margin: 25px 15px;  
+    left: 25%; 
+    top: 1%; 
+    position: relative;
+
+    text-align: center;
+    
+    font-size: 40px;
+    
+
+    
+    
+} 
+.menu-item h4{ 
+    padding: 2px;
+    color: rgba(28, 34, 109, 0.986);
+} 
+footer{ 
+    position: fixed;
+    bottom: 0;
+    background-color: black; 
+    height: 40px;  
+    width: 100%;
+    color: white; 
+    text-align: center;
+}
+
+
